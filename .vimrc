@@ -24,8 +24,6 @@ set laststatus=2
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-nnoremap / /\v
-vnoremap / /\v
 set ignorecase
 set smartcase
 set gdefault
@@ -43,8 +41,6 @@ set hlsearch
 set novb  
 set shortmess=atI
 set cursorline
-hi clear CursorLine
-hi CursorLine ctermbg=8
 syntax on 
 set listchars=tab:▸\ ,eol:¬
 set scrolloff=3
