@@ -44,9 +44,9 @@ hi link htmlTag                     xmlTag
 hi link htmlTagName                 xmlTagName
 hi link htmlEndTag                  xmlEndTag
 
-hi Normal                    guifg=#E6E1DC guibg=#232323
+hi Normal                    guifg=#E6E1DC guibg=#303030
 hi Cursor                    guifg=#101010 ctermfg=0 guibg=#DDDDDD ctermbg=15	
-hi CursorLine                guibg=#101010 ctermbg=233 cterm=NONE ctermbg=8
+hi CursorLine                guibg=#101010 ctermbg=233 cterm=NONE ctermbg=8 cterm=NONE
 hi ColorColumn               guibg=#353535
 
 hi StatusLine                guifg=#2B2B2B ctermfg=159 guibg=#DDDDDD

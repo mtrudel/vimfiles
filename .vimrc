@@ -61,46 +61,45 @@ if v:version > 730
   set colorcolumn=80,120
 endif
 
-if v:version > 702
-  set relativenumber
-endif
+"if v:version > 702
+  "set relativenumber
+"endif
 
 
 " Key mappings
 " ============
 
+set pastetoggle=<leader>P 
 noremap <silent> <Space> :silent noh<Bar>echo<CR>
-nnoremap <leader><space> :noh<cr>
-
 nnoremap <tab> %
 vnoremap <tab> %
 nnoremap j gj
 nnoremap k gk
-
-nmap <leader>l :set list!<CR>
-
-nmap <leader>v :vsplit<CR> <C-w><C-w>
-nmap <leader>n :split<CR> <C-w><C-w>
-nmap <leader>w <C-w><C-w>_
-
-" Keyboard remaps
-nmap <silent> <Leader>o :NERDTreeToggle<CR>
-map <silent> <Leader>/ :TComment<CR>
-nmap <leader>p :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
-vmap <leader>c :w !pbcopy<CR><CR>
-nmap <leader>c :.w !pbcopy<CR><CR>
-map <leader>s :shell<CR>
-map <leader>f :Ack 
-map <leader>q ZQ
+inoremap jj <esc>
+cnoremap jj <c-c>
 map QQ ZQ
 map WW ZZ
-nmap <silent> <leader>w :set wrap!<CR>
-nmap <silent> <leader>s :set spell!<CR>
-nmap <silent> <leader>n :silent :nohlsearch<CR>
-nnoremap <leader>1 yypVr=
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-nmap <leader>v :e $MYVIMRC<CR>
 
+nnoremap <leader><space> :noh<cr>
+
+map <leader>b :LustyJuggler<CR>
+map <leader>c :copen<CR>
+map <leader>cc :cclose<CR>
+map <leader>f :Ack 
+nmap <leader>l :set list!<CR>
+nmap <silent> <leader>n :silent :nohlsearch<CR>
+nmap <silent> <Leader>o :NERDTreeToggle<CR>
+nmap <leader>p "*p
+map <leader>q ZQ
+nmap <leader>r :registers<CR>
+map <leader>x :shell<CR>
+nmap <leader>s :setlocal spell!<CR>
+nmap <leader>v :e $MYVIMRC<CR>
+nmap <silent> <leader>w :set wrap!<CR>
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+nmap <leader>y "*y
+nnoremap <leader>1 yypVr=
+map <silent> <Leader>/ :TComment<CR>
 
 " File type tweaks
 " =================
@@ -115,4 +114,8 @@ endif
 
 autocmd FileType make set noexpandtab
 autocmd FileType md set nonumber
+autocmd BufNewFile,BufRead,BufEnter Rakefile,Capfile,Vagrantfile set filetype=ruby
+autocmd BufWritePost * if getline(1) =~ "^#!" | silent !chmod a+x <afile> | endif | endif
+autocmd FocusLost * :wa
 
+let g:LustyJugglerSuppressRubyWarning = 1
