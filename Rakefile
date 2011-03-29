@@ -11,7 +11,7 @@ task :submodules do
 end
 
 task :build do
-  `cd #{File.join(Path, "bundle", "command-t")} ; rake make`
+  `cd #{File.join(Path, "bundle", "command-t")} ; rvm use system ; rake make`
 end
 
 task :install => [:rcfiles, :submodules, :build]
