@@ -1,4 +1,4 @@
 set guioptions-=T
 
-colorscheme railscasts
+colorscheme solarized
 set guifont=Monaco:h11
