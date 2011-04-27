@@ -69,6 +69,7 @@ endif
 " Key mappings
 " ============
 
+map Q <Nop> " shut up ex mode
 set pastetoggle=<leader>P 
 noremap <silent> <Space> :silent noh<Bar>echo<CR>
 nnoremap <tab> %
@@ -119,3 +120,8 @@ autocmd BufWritePost * if getline(1) =~ "^#!" | silent !chmod a+x <afile> | endi
 autocmd FocusLost * :wa
 
 let g:LustyJugglerSuppressRubyWarning = 1
+
+set background=dark
+colorscheme solarized
+set mouse=a
+
