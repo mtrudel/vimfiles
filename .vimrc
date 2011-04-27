@@ -86,6 +86,7 @@ nnoremap <leader><space> :noh<cr>
 map <leader>b :LustyJuggler<CR>
 map <leader>c :copen<CR>
 map <leader>cc :cclose<CR>
+map <leader>d :s//\r/<CR>
 map <leader>f :Ack 
 nmap <leader>l :set list!<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
