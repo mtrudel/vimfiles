@@ -22,3 +22,6 @@
 [submodule "bundle/vim-web-indent"]
 	path = bundle/vim-web-indent
 	url = https://github.com/garbas/vim-web-indent.git
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git

@@ -92,7 +92,6 @@ nmap <leader>l :set list!<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
 nmap <silent> <Leader>o :NERDTreeToggle<CR>
 nmap <leader>p "*p
-map <leader>q ZQ
 nmap <leader>r :registers<CR>
 map <leader>x :shell<CR>
 nmap <leader>s :setlocal spell!<CR>
@@ -102,6 +101,8 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 nmap <leader>y "*y
 nnoremap <leader>1 yypVr=
 map <silent> <Leader>/ :TComment<CR>
+map <silent> <Leader>t :CommandTFlush<CR> :CommandT<CR>
+map <leader>q ysiw
 
 " File type tweaks
 " =================
