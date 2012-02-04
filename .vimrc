@@ -120,6 +120,7 @@ autocmd FileType md set nonumber
 autocmd BufNewFile,BufRead,BufEnter Rakefile,Capfile,Vagrantfile set filetype=ruby
 autocmd BufWritePost * if getline(1) =~ "^#!" | silent !chmod a+x <afile> | endif | endif
 autocmd FocusLost * :wa
+autocmd BufWritePre *.js,*.rb :s/\s\+$//e
 
 let g:LustyJugglerSuppressRubyWarning = 1
 
