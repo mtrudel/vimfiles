@@ -21,7 +21,7 @@ set wildmode=list:longest
 set ttyfast
 set backspace=indent,eol,start
 set laststatus=2
-set wrap
+set nowrap
 set textwidth=79
 set formatoptions=qrn1
 set ignorecase
