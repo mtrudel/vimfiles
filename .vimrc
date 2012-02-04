@@ -30,7 +30,7 @@ set gdefault
 set incsearch
 set showmatch
 set hlsearch
-
+set dir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp 
 
 " Visual things
 " =============
