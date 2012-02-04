@@ -123,7 +123,7 @@ autocmd FocusLost * :wa
 
 let g:LustyJugglerSuppressRubyWarning = 1
 
-set background=dark
+set background=light
 colorscheme solarized
 set mouse=a
 
