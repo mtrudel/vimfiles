@@ -127,3 +127,4 @@ set background=light
 colorscheme solarized
 set mouse=a
 
+set wildignore+=*.o,*.obj,.git,*.png,*.otf,build/**
