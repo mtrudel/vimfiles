@@ -2,7 +2,7 @@ Path = File.dirname(__FILE__)
 
 task :rcfiles do
   %w(.vimrc .gvimrc).each do |file|
-    `ln -s #{File.join(Path, file)} $HOME`
+    `ln -sfn #{File.join(Path, file)} $HOME`
   end
 end
 
