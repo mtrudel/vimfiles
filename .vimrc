@@ -31,6 +31,8 @@ set incsearch
 set showmatch
 set hlsearch
 set dir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp 
+set exrc
+set secure
 
 " Visual things
 " =============
