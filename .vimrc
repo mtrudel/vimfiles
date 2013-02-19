@@ -81,7 +81,6 @@ noremap  P "*P
 
 map Q <Nop> " shut up ex mode
 set pastetoggle=<leader>P 
-noremap <silent> <Space> :silent noh<Bar>echo<CR>
 nnoremap <tab> %
 vnoremap <tab> %
 nnoremap j gj
