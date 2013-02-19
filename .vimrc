@@ -33,6 +33,7 @@ set hlsearch
 set dir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp 
 set exrc
 set secure
+set nofoldenable 
 
 " Visual things
 " =============
