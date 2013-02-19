@@ -73,6 +73,12 @@ set mouse=a
 " Key mappings
 " ============
 
+noremap  y "*y
+noremap  yy "*yy
+noremap  Y "*Y
+noremap  p "*p
+noremap  P "*P
+
 map Q <Nop> " shut up ex mode
 set pastetoggle=<leader>P 
 noremap <silent> <Space> :silent noh<Bar>echo<CR>
