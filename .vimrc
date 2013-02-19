@@ -118,5 +118,10 @@ if has("autocmd")
   autocmd BufWritePost *.md,*.markdown :silent !cat %:p | curl -X PUT -T - http://localhost:8090/
 endif
 
+" Customize plugins
+" =================
 
+let g:LustyJugglerSuppressRubyWarning = 1
 set wildignore+=*.o,*.obj,.git,*.png,*.otf,build/**
+let g:SuperTabDefaultCompletionType = "<C-x><C-o>"
+let g:Powerline_symbols = 'fancy'
