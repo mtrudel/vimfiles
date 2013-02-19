@@ -57,6 +57,8 @@ set shiftwidth=2
 set autoindent
 
 " Window bits
+
+set title
 set equalalways " Multiple windows, when created, are equal in size
 set splitbelow splitright
 
@@ -68,6 +70,9 @@ endif
   "set relativenumber
 "endif
 
+set background=light
+colorscheme solarized
+set mouse=a
 
 " Key mappings
 " ============
