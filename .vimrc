@@ -66,10 +66,6 @@ if v:version > 730
   set colorcolumn=80,120
 endif
 
-"if v:version > 702
-  "set relativenumber
-"endif
-
 set background=light
 colorscheme solarized
 set mouse=a
