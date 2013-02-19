@@ -109,14 +109,14 @@ if has("autocmd")
     autocmd bufwritepost .vimrc source ~/.vimrc
   augroup END
 
-autocmd FileType make set noexpandtab
-autocmd FileType md set nonumber
-autocmd BufNewFile,BufRead,BufEnter Rakefile,Capfile,Vagrantfile set filetype=ruby
-autocmd BufWritePost * if getline(1) =~ "^#!" | silent !chmod a+x <afile> | endif | endif
-autocmd FocusLost * :wa
-autocmd BufWritePre *.js,*.rb :s/\s\+$//e
+  autocmd FileType make set noexpandtab
+  autocmd FileType md set nonumber
+  autocmd BufNewFile,BufRead,BufEnter Rakefile,Capfile,Vagrantfile set filetype=ruby
+  autocmd FocusLost * :wall
+  autocmd BufWritePre *.js,*.rb :s/\s\+$//e
 
-let g:LustyJugglerSuppressRubyWarning = 1
+  autocmd BufWritePost *.md,*.markdown :silent !cat %:p | curl -X PUT -T - http://localhost:8090/
+endif
 
 set background=light
 colorscheme solarized
