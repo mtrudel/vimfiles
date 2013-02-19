@@ -21,8 +21,9 @@ set ttyfast
 set backspace=indent,eol,start
 set laststatus=2
 set nowrap
-set textwidth=79
-set formatoptions=qrn1
+set textwidth=80
+set linebreak
+set formatoptions=r1tcq
 set ignorecase
 set smartcase
 set gdefault
@@ -46,9 +47,9 @@ set scrolloff=3
 set showmode
 set showcmd
 set hidden
-set expandtab       " Use spaces in lieu of tab characters
+set expandtab
 set tabstop=2
-set softtabstop=2   " Tabs are 2 spaces wide
+set softtabstop=2
 set shiftwidth=2
 set autoindent
 
