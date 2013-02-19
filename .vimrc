@@ -101,15 +101,13 @@ nmap <leader>V :e $MYVIMRC<CR>
 nmap <silent> <leader>w :set wrap!<CR>
 
 " File type tweaks
-" =================
+" ================
 
-" http://stackoverflow.com/questions/2400264/is-it-possible-to-apply-vim-configurations-without-restarting/2400289#2400289
 if has("autocmd")
   augroup myvimrchooks
     au!
     autocmd bufwritepost .vimrc source ~/.vimrc
   augroup END
-endif
 
 autocmd FileType make set noexpandtab
 autocmd FileType md set nonumber
