@@ -96,7 +96,7 @@ nnoremap <leader><space> :noh<cr>
 map <Leader>a ggVG
 map <leader>b :LustyJuggler<CR>
 map <leader>f :Ack 
-map <silent> <leader>t :CommandTFlush<CR> :CommandT<CR>
+map <silent> <leader>t :CtrlPMixed<CR>
 nmap <leader>V :e $MYVIMRC<CR>
 nmap <silent> <leader>w :set wrap!<CR>
 
