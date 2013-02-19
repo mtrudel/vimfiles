@@ -14,7 +14,6 @@ let mapleader = ","
 set nocompatible
 set nobackup
 set modelines=0
-set shell=bash
 set encoding=utf-8
 set wildmenu
 set wildmode=list:longest
