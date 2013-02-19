@@ -118,8 +118,5 @@ if has("autocmd")
   autocmd BufWritePost *.md,*.markdown :silent !cat %:p | curl -X PUT -T - http://localhost:8090/
 endif
 
-set background=light
-colorscheme solarized
-set mouse=a
 
 set wildignore+=*.o,*.obj,.git,*.png,*.otf,build/**
