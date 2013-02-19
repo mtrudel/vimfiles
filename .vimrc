@@ -83,35 +83,22 @@ map Q <Nop> " shut up ex mode
 set pastetoggle=<leader>P 
 nnoremap <tab> %
 vnoremap <tab> %
-nnoremap j gj
-nnoremap k gk
 inoremap jj <esc>
 cnoremap jj <c-c>
 map QQ ZQ
-map WW ZZ
+map WW :wa<CR>
+
+vnoremap < <gv
+vnoremap > >gv
 
 nnoremap <leader><space> :noh<cr>
 
+map <Leader>a ggVG
 map <leader>b :LustyJuggler<CR>
-map <leader>c :copen<CR>
-map <leader>cc :cclose<CR>
-map <leader>d :s//\r/<CR>
 map <leader>f :Ack 
-nmap <leader>l :set list!<CR>
-nmap <silent> <leader>n :silent :nohlsearch<CR>
-nmap <silent> <Leader>o :NERDTreeToggle<CR>
-nmap <leader>p "*p
-nmap <leader>r :registers<CR>
-map <leader>x :shell<CR>
-nmap <leader>s :setlocal spell!<CR>
-nmap <leader>v :e $MYVIMRC<CR>
+map <silent> <leader>t :CommandTFlush<CR> :CommandT<CR>
+nmap <leader>V :e $MYVIMRC<CR>
 nmap <silent> <leader>w :set wrap!<CR>
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-nmap <leader>y "*y
-nnoremap <leader>1 yypVr=
-map <silent> <Leader>/ :TComment<CR>
-map <silent> <Leader>t :CommandTFlush<CR> :CommandT<CR>
-map <leader>q ysiw
 
 " File type tweaks
 " =================
