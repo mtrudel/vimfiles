@@ -83,6 +83,8 @@ map Q <Nop> " shut up ex mode
 set pastetoggle=<leader>P 
 nnoremap <tab> %
 vnoremap <tab> %
+nnoremap j gj
+nnoremap k gk
 inoremap jj <esc>
 cnoremap jj <c-c>
 cnoremap <M-OD>  <S-Left>
