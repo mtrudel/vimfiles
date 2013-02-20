@@ -85,6 +85,8 @@ nnoremap <tab> %
 vnoremap <tab> %
 inoremap jj <esc>
 cnoremap jj <c-c>
+cnoremap <M-OD>  <S-Left>
+cnoremap <M-OC>  <S-Right>
 map QQ ZQ
 map WW :wa<CR>
 
