@@ -91,6 +91,7 @@ cnoremap <M-OD>  <S-Left>
 cnoremap <M-OC>  <S-Right>
 map QQ ZQ
 map WW :wa<CR>
+nmap ; :
 
 vnoremap < <gv
 vnoremap > >gv
@@ -118,8 +119,6 @@ if has("autocmd")
   autocmd BufNewFile,BufRead,BufEnter Rakefile,Capfile,Vagrantfile set filetype=ruby
   autocmd FocusLost * :wall
   autocmd BufWritePre *.js,*.rb :s/\s\+$//e
-
-  autocmd BufWritePost *.md,*.markdown :silent !cat %:p | curl -X PUT -T - http://localhost:8090/
 endif
 
 " Customize plugins
