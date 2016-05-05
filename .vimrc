@@ -100,7 +100,6 @@ nnoremap <leader><space> :noh<cr>
 
 map <Leader>a ggVG
 map <leader>b :LustyJuggler<CR>
-map <leader>f :Ack 
 nmap <leader>V :e $MYVIMRC<CR>
 nmap <silent> <leader>w :set wrap!<CR>
 
@@ -146,6 +145,15 @@ if executable('ag')
 else
   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 endif
+
+
+
+" ack
+" ===
+
+map <leader>f :Ack 
+set grepprg=ag\ --nogroup\ --nocolor
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Syntastic
 " =========
