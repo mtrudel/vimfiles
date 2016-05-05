@@ -34,6 +34,8 @@ set dir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set exrc
 set secure
 set nofoldenable 
+set noswapfile
+
 
 " Visual things
 " =============
@@ -43,7 +45,7 @@ set ruler
 set hlsearch
 set novb  
 set shortmess=atI
-set cursorline
+"set cursorline
 syntax on 
 set listchars=tab:▸\ ,eol:¬
 set scrolloff=3
@@ -70,6 +72,20 @@ set background=light
 colorscheme solarized
 set mouse=a
 
+if &term =~ "xterm.*"
+    let &t_ti = &t_ti . "\e[?2004h"
+    let &t_te = "\e[?2004l" . &t_te
+    function! XTermPasteBegin(ret)
+        set pastetoggle=<Esc>[201~
+        set paste
+        return a:ret
+    endfunction
+    map <expr> <Esc>[200~ XTermPasteBegin("i")
+    imap <expr> <Esc>[200~ XTermPasteBegin("")
+    cmap <Esc>[200~ <nop>
+    cmap <Esc>[201~ <nop>
+endif
+
 " Key mappings
 " ============
 
@@ -92,6 +108,8 @@ cnoremap <M-OC>  <S-Right>
 map QQ ZQ
 map WW :wa<CR>
 nmap ; :
+map <C-K> <C-W>k<C-W>
+map <C-J> <C-W>j<C-W>
 
 vnoremap < <gv
 vnoremap > >gv
@@ -119,6 +137,7 @@ if has("autocmd")
   autocmd BufNewFile,BufRead,BufEnter Rakefile,Capfile,Vagrantfile set filetype=ruby
   autocmd FocusLost * :wall
   autocmd BufWritePre *.js,*.rb :s/\s\+$//e
+  autocmd StdinReadPre * let s:std_in=1
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 endif
 
@@ -129,6 +148,8 @@ let g:LustyJugglerSuppressRubyWarning = 1
 set wildignore+=*.o,*.obj,.git,*.png,*.otf,build/**
 let g:SuperTabDefaultCompletionType = "<C-x><C-o>"
 let g:Powerline_symbols = 'fancy'
+highlight clear SignColumn
+
 
 
 " CtrlP
