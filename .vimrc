@@ -102,6 +102,8 @@ map <Leader>a ggVG
 map <leader>b :LustyJuggler<CR>
 nmap <leader>V :e $MYVIMRC<CR>
 nmap <silent> <leader>w :set wrap!<CR>
+nmap <leader>1 :NERDTreeToggle<CR>
+nmap <leader>j :NERDTreeFind<CR>
 
 " File type tweaks
 " ================
@@ -117,6 +119,7 @@ if has("autocmd")
   autocmd BufNewFile,BufRead,BufEnter Rakefile,Capfile,Vagrantfile set filetype=ruby
   autocmd FocusLost * :wall
   autocmd BufWritePre *.js,*.rb :s/\s\+$//e
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 endif
 
 " Customize plugins
