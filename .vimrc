@@ -29,6 +29,7 @@ set smartcase
 set gdefault
 set incsearch
 set showmatch
+hi MatchParen cterm=underline ctermbg=none ctermfg=none
 set hlsearch
 set dir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp 
 set exrc
@@ -64,9 +65,7 @@ set title
 set equalalways " Multiple windows, when created, are equal in size
 set splitbelow splitright
 
-if v:version > 730
-  set colorcolumn=80,120
-endif
+set colorcolumn=80
 
 set background=light
 colorscheme solarized
@@ -148,7 +147,6 @@ endif
 let g:LustyJugglerSuppressRubyWarning = 1
 set wildignore+=*.o,*.obj,.git,*.png,*.otf,build/**
 let g:SuperTabDefaultCompletionType = "<C-x><C-o>"
-let g:Powerline_symbols = 'fancy'
 highlight clear SignColumn
 
 
@@ -159,7 +157,7 @@ highlight clear SignColumn
 nnoremap <silent> <leader>t :ClearCtrlPCache<cr>\|:CtrlP<cr>
 inoremap <silent> <leader>t <esc> :ClearCtrlPCache<cr>\|:CtrlP<cr>
 let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp)$|(^|[/\\])\.(git)($|[/\\])|__init__\.py'
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_working_path_mode = ''
 let g:ctrlp_dotfiles = 1
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_max_height = 30
@@ -171,8 +169,6 @@ else
   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 endif
 
-
-
 " ack
 " ===
 
@@ -180,14 +176,19 @@ map <leader>f :Ack
 set grepprg=ag\ --nogroup\ --nocolor
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
+
+" Powerline / Airline
+" ===================
+
+let g:airline_theme='solarized'
+let g:airline_powerline_fonts = 1
+
 " Syntastic
 " =========
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 1
+let g:syntastic_ruby_mri_quiet_messages = {'regex': 'assigned but unused variable'}
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
