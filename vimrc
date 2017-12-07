@@ -67,7 +67,7 @@ set splitbelow splitright
 
 set colorcolumn=80
 
-set background=light
+set background=dark
 colorscheme solarized
 set mouse=a
 
