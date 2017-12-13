@@ -154,19 +154,17 @@ highlight clear SignColumn
 " CtrlP
 " =====
 
-nnoremap <silent> <leader>t :ClearCtrlPCache<cr>\|:CtrlP<cr>
-inoremap <silent> <leader>t <esc> :ClearCtrlPCache<cr>\|:CtrlP<cr>
-let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp)$|(^|[/\\])\.(git)($|[/\\])|__init__\.py'
+nnoremap <silent> <leader>t :CtrlP<cr>
+inoremap <silent> <leader>t :CtrlP<cr>
+
 let g:ctrlp_working_path_mode = ''
 let g:ctrlp_dotfiles = 1
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_max_height = 30
 let g:ctrlp_cmd = 'CtrlP' 
-if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+if executable('rg')
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
   let g:ctrlp_use_caching = 0
-else
-  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 endif
 
 " ack
