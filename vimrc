@@ -37,7 +37,6 @@ set secure
 set nofoldenable 
 set noswapfile
 
-
 " Visual things
 " =============
 
@@ -58,6 +57,7 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set autoindent
+set clipboard=unnamed
 
 " Window bits
 
@@ -71,28 +71,16 @@ set background=dark
 colorscheme solarized
 set mouse=a
 
-if &term =~ "xterm.*"
-    let &t_ti = &t_ti . "\e[?2004h"
-    let &t_te = "\e[?2004l" . &t_te
-    function! XTermPasteBegin(ret)
-        set pastetoggle=<Esc>[201~
-        set paste
-        return a:ret
-    endfunction
-    map <expr> <Esc>[200~ XTermPasteBegin("i")
-    imap <expr> <Esc>[200~ XTermPasteBegin("")
-    cmap <Esc>[200~ <nop>
-    cmap <Esc>[201~ <nop>
-endif
-
 " Key mappings
 " ============
 
-noremap  y "*y
-noremap  yy "*yy
-noremap  Y "*Y
-noremap  p "*p
-noremap  P "*P
+noremap s "_s
+noremap c "_c
+noremap C "_C
+noremap d "_d
+noremap dd "_dd
+noremap D "_D
+noremap x "_x
 
 map Q <Nop> " shut up ex mode
 set pastetoggle=<leader>P 
