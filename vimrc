@@ -21,7 +21,7 @@ set ttyfast
 set backspace=indent,eol,start
 set laststatus=2
 set nowrap
-set textwidth=80
+set textwidth=120
 set linebreak
 set formatoptions=r1tcq
 set ignorecase
@@ -65,7 +65,7 @@ set title
 set equalalways " Multiple windows, when created, are equal in size
 set splitbelow splitright
 
-set colorcolumn=80
+set colorcolumn=80,120
 
 set background=dark
 colorscheme solarized
