@@ -84,19 +84,9 @@ noremap x "_x
 
 map Q <Nop> " shut up ex mode
 set pastetoggle=<leader>P 
-nnoremap <tab> %
-vnoremap <tab> %
-nnoremap j gj
-nnoremap k gk
-inoremap jj <esc>
-cnoremap jj <c-c>
-cnoremap <M-OD>  <S-Left>
-cnoremap <M-OC>  <S-Right>
 map QQ ZQ
 map WW :wa<CR>
 nmap ; :
-map <C-K> <C-W>k<C-W>
-map <C-J> <C-W>j<C-W>
 
 vnoremap < <gv
 vnoremap > >gv
