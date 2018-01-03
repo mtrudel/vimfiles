@@ -19,6 +19,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sjbach/lusty'
 Plugin 'junegunn/rainbow_parentheses.vim'
+Plugin 'mhinz/vim-mix-format'
 
 call vundle#end()
 filetype plugin indent on
@@ -188,3 +189,8 @@ let g:syntastic_ruby_mri_quiet_messages = {'regex': 'assigned but unused variabl
 
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 nmap <leader>r :RainbowParentheses!!<CR>
+
+" vim-mix-format
+" ==============
+
+let g:mix_format_on_save = 1
