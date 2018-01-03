@@ -1,17 +1,32 @@
-" Load bundles via pathogen
-" =========================
-
+set nocompatible
 filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-filetype plugin indent on
 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin('~/.vim/bundle.vundle')
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'slashmili/alchemist.vim'
+Plugin 'ervandew/supertab'
+Plugin 'elixir-editors/vim-elixir'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'sjbach/lusty'
+Plugin 'junegunn/rainbow_parentheses.vim'
+
+call vundle#end()
+filetype plugin indent on
 
 " Application settings
 " ====================
 
 let mapleader = ","
-set nocompatible
 set nobackup
 set modelines=0
 set encoding=utf-8
