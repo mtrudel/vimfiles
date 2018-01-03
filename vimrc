@@ -168,3 +168,8 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 let g:syntastic_ruby_mri_quiet_messages = {'regex': 'assigned but unused variable'}
 
+" RainbowParentheses
+" ==================
+
+let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
+nmap <leader>r :RainbowParentheses!!<CR>
