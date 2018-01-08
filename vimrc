@@ -17,7 +17,7 @@ Plugin 'ervandew/supertab'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'sjbach/lusty'
+Plugin 'mtrudel/lusty'
 Plugin 'junegunn/rainbow_parentheses.vim'
 Plugin 'mhinz/vim-mix-format'
 
