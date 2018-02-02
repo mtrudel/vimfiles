@@ -20,6 +20,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mtrudel/lusty'
 Plugin 'junegunn/rainbow_parentheses.vim'
 Plugin 'mhinz/vim-mix-format'
+Plugin 'sjl/vitality.vim'
 
 call vundle#end()
 filetype plugin indent on
