@@ -21,6 +21,7 @@ Plugin 'sjbach/lusty'
 Plugin 'junegunn/rainbow_parentheses.vim'
 Plugin 'mhinz/vim-mix-format'
 Plugin 'sjl/vitality.vim'
+Plugin 'bkad/CamelCaseMotion'
 
 call vundle#end()
 filetype plugin indent on
