@@ -125,7 +125,7 @@ nmap <leader>j :NERDTreeFind<CR>
 if has("autocmd")
   augroup myvimrchooks
     au!
-    autocmd bufwritepost .vimrc source ~/.vimrc
+    autocmd bufwritepost vimrc source ~/.vim/vimrc
   augroup END
 
   autocmd FileType make set noexpandtab
