@@ -10,7 +10,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'ervandew/supertab'
@@ -22,6 +21,7 @@ Plugin 'junegunn/rainbow_parentheses.vim'
 Plugin 'mhinz/vim-mix-format'
 Plugin 'sjl/vitality.vim'
 Plugin 'bkad/CamelCaseMotion'
+Plugin 'junegunn/fzf'
 
 call vundle#end()
 filetype plugin indent on
@@ -147,21 +147,12 @@ highlight clear SignColumn
 
 
 
-" CtrlP
-" =====
+" FZF
+" ===
 
-nnoremap <silent> <leader>t :CtrlP<cr>
-inoremap <silent> <leader>t :CtrlP<cr>
-
-let g:ctrlp_working_path_mode = ''
-let g:ctrlp_dotfiles = 1
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_max_height = 30
-let g:ctrlp_cmd = 'CtrlP' 
-if executable('rg')
-  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-  let g:ctrlp_use_caching = 0
-endif
+nnoremap <silent> <leader>t :FZF<cr>
+inoremap <silent> <leader>t :FZF<cr>
+let $FZF_DEFAULT_COMMAND= 'ag -g ""'
 
 " ack
 " ===
