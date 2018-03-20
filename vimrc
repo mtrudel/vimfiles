@@ -11,7 +11,6 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'slashmili/alchemist.vim'
 Plugin 'ervandew/supertab'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'vim-airline/vim-airline'
@@ -118,6 +117,7 @@ nmap <leader>V :e $MYVIMRC<CR>
 nmap <silent> <leader>w :set wrap!<CR>
 nmap <leader>1 :NERDTreeToggle<CR>
 nmap <leader>j :NERDTreeFind<CR>
+nmap <leader>= :MixFormat<CR>
 
 " File type tweaks
 " ================
@@ -183,8 +183,3 @@ let g:syntastic_ruby_mri_quiet_messages = {'regex': 'assigned but unused variabl
 
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 nmap <leader>r :RainbowParentheses!!<CR>
-
-" vim-mix-format
-" ==============
-
-let g:mix_format_on_save = 1
