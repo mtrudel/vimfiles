@@ -131,7 +131,6 @@ if has("autocmd")
   autocmd FileType make set noexpandtab
   autocmd FileType md set nonumber
   autocmd BufNewFile,BufRead,BufEnter Rakefile,Capfile,Vagrantfile set filetype=ruby
-  autocmd FocusLost * :wall
   autocmd BufWritePre *.js,*.rb :s/\s\+$//e
   autocmd BufWritePost * :GitGutter
   autocmd StdinReadPre * let s:std_in=1
