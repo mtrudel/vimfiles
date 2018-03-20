@@ -112,11 +112,11 @@ nnoremap <leader><space> :noh<cr>
 
 map <Leader>a ggVG
 map <leader>b :LustyJuggler<CR>
-inoremap <silent> <Leader>b <esc>:LustyJuggler<CR>
 nmap <leader>V :e $MYVIMRC<CR>
 nmap <silent> <leader>w :set wrap!<CR>
 nmap <leader>1 :NERDTreeToggle<CR>
 nmap <leader>j :NERDTreeFind<CR>
+nmap <leader>o :only<CR>
 nmap <leader>= :MixFormat<CR>
 
 " File type tweaks
