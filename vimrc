@@ -20,7 +20,7 @@ Plugin 'junegunn/rainbow_parentheses.vim'
 Plugin 'mhinz/vim-mix-format'
 Plugin 'sjl/vitality.vim'
 Plugin 'bkad/CamelCaseMotion'
-Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -150,8 +150,10 @@ highlight clear SignColumn
 " FZF
 " ===
 
-nnoremap <silent> <leader>t :FZF<cr>
-inoremap <silent> <leader>t :FZF<cr>
+nnoremap <silent> <leader>t :Files<cr>
+inoremap <silent> <leader>t :Files<cr>
+nnoremap <silent> <leader>T :GFiles<cr>
+inoremap <silent> <leader>T :GFiles<cr>
 let $FZF_DEFAULT_COMMAND= 'ag -g ""'
 
 " ack
