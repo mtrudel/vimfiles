@@ -17,10 +17,13 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sjbach/lusty'
 Plugin 'junegunn/rainbow_parentheses.vim'
-Plugin 'mhinz/vim-mix-format'
+Plugin 'mtrudel/vim-mix-format'
 Plugin 'sjl/vitality.vim'
 Plugin 'bkad/CamelCaseMotion'
+Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
@@ -84,7 +87,7 @@ set splitbelow splitright
 
 set colorcolumn=80,120
 
-set background=dark
+set background=light
 colorscheme solarized
 set mouse=a
 
@@ -133,6 +136,7 @@ if has("autocmd")
   autocmd BufNewFile,BufRead,BufEnter Rakefile,Capfile,Vagrantfile set filetype=ruby
   autocmd BufWritePre *.js,*.rb :s/\s\+$//e
   autocmd BufWritePost * :GitGutter
+  autocmd BufWritePost *.ex,*.exs :MixFormat
   autocmd StdinReadPre * let s:std_in=1
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 endif
@@ -184,3 +188,5 @@ let g:syntastic_ruby_mri_quiet_messages = {'regex': 'assigned but unused variabl
 
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 nmap <leader>r :RainbowParentheses!!<CR>
+
+let g:mix_format_silent_errors = 1
